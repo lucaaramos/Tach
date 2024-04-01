@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo
+    container_name: mongo-db
+    ports:
+      - "27017:27017"
+
+  accounts-service:
+    build:
+      context: ./accounts
+      dockerfile: dockerfile
+    container_name: accounts-service
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mongodb
+    environment:             
+      MONGO_URL: mongodb://mongodb:27017
+
+  transactions-service:
+    build:
+      context: ./transactions
+      dockerfile: dockerfile
+    container_name: transactions-service
+    ports:
+      - "8081:8081"
+    depends_on:
+      - mongodb
+    environment:             
+      MONGO_URL: mongodb://mongodb:27017
