@@ -18,7 +18,7 @@ Asegúrate de tener instalado lo siguiente en tu sistema:
 
 2. Navega hasta el repositorio
 
-cd <Tach>
+cd Tach
 
 3. Crea un archivo .env en el directorio de accounts y transactions, y define las variables de entorno necesarias.
 
