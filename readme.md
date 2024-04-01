@@ -14,7 +14,7 @@ Asegúrate de tener instalado lo siguiente en tu sistema:
 1. Clona este repositorio en tu máquina local:
 
    ```bash
-   git clone <url-del-repositorio>
+   git clone https://github.com/lucaaramos/Tach.git
 
 2. Navega hasta el repositorio
 
